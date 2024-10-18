@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/navbar.tsx","./src/pages/addcity.tsx","./src/pages/addcustomer.tsx","./src/pages/addstate.tsx","./src/pages/cities.tsx","./src/pages/customerlist.tsx","./src/pages/states.tsx"],"version":"5.6.3"}
