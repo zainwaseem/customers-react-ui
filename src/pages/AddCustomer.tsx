@@ -100,7 +100,7 @@ const AddCustomer = () => {
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition duration-200"
             required
           />
         </div>
@@ -110,7 +110,7 @@ const AddCustomer = () => {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition duration-200"
             required
           />
         </div>
@@ -120,7 +120,7 @@ const AddCustomer = () => {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition duration-200"
             required
           />
         </div>
@@ -138,7 +138,7 @@ const AddCustomer = () => {
           <select
             value={selectedCountry}
             onChange={(e) => setSelectedCountry(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition duration-200"
             required
           >
             <option value="">Select Country</option>
@@ -155,7 +155,7 @@ const AddCustomer = () => {
           <select
             value={selectedState}
             onChange={(e) => setSelectedState(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition duration-200"
             required
           >
             <option value="">Select State</option>
@@ -172,7 +172,7 @@ const AddCustomer = () => {
           <select
             value={selectedCity}
             onChange={(e) => setSelectedCity(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-400 transition duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary transition duration-200"
             required
           >
             <option value="">Select City</option>
@@ -185,7 +185,7 @@ const AddCustomer = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-3 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full py-3 text-white bg-primary rounded-lg shadow-md  hover:bg-primary/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
         >
           Register
         </button>
