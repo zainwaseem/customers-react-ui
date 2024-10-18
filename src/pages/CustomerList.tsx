@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { HashLoader } from "react-spinners";
+import { baseUrl } from "../baseurl";
 
 const CustomerList = () => {
   const [customers, setCustomers] = useState([]);
@@ -13,7 +14,7 @@ const CustomerList = () => {
   // Fetch all customers
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/customers")
+      .get(`${baseUrl}/api/customers`)
       .then((response) => {
         setCustomers(response.data);
         setLoading(false);

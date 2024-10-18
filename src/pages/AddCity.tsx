@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { baseUrl } from "../baseurl";
 
 const AddCity = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,7 @@ const AddCity = () => {
   // Fetch countries
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/countries")
+      .get(`${baseUrl}/api/countries`)
       .then((response) => {
         setCountries(response.data);
       })
@@ -28,7 +29,7 @@ const AddCity = () => {
   useEffect(() => {
     if (selectedCountry) {
       axios
-        .get(`http://localhost:5000/api/states/${selectedCountry}`)
+        .get(`${baseUrl}/api/states/${selectedCountry}`)
         .then((response) => {
           setStates(response.data);
         })
@@ -44,7 +45,7 @@ const AddCity = () => {
   useEffect(() => {
     if (selectedState) {
       axios
-        .get(`http://localhost:5000/api/cities/${selectedState}`)
+        .get(`${baseUrl}/api/cities/${selectedState}`)
         .then((response) => {
           setCities(response.data);
         })
@@ -70,7 +71,7 @@ const AddCity = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/cities", data)
+      .post(`${baseUrl}/api/cities`, data)
       .then((response) => {
         toast.success("City added successfully.");
         setName("");

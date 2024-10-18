@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { HashLoader } from "react-spinners";
+import { baseUrl } from "../baseurl";
 
 const AddState = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,7 @@ const AddState = () => {
   // Fetch countries
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/countries")
+      .get(`${baseUrl}/api/countries`)
       .then((response) => {
         setCountries(response.data);
       })
@@ -29,7 +30,7 @@ const AddState = () => {
     if (selectedCountry) {
       setLoadingStates(true);
       axios
-        .get(`http://localhost:5000/api/states/${selectedCountry}`)
+        .get(`${baseUrl}/api/states/${selectedCountry}`)
         .then((response) => {
           setStates(response.data);
           setLoadingStates(false);
@@ -57,7 +58,7 @@ const AddState = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/states", data)
+      .post(`${baseUrl}/api/states`, data)
       .then((response) => {
         toast.success("State added successfully.");
         setName("");

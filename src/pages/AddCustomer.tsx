@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { baseUrl } from "../baseurl";
 
 const AddCustomer = () => {
   const [name, setName] = useState("");
@@ -17,7 +18,7 @@ const AddCustomer = () => {
   // Fetch countries
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/countries")
+      .get(`${baseUrl}/api/countries`)
       .then((response) => {
         setCountries(response.data);
       })
@@ -30,7 +31,7 @@ const AddCustomer = () => {
   useEffect(() => {
     if (selectedCountry) {
       axios
-        .get(`http://localhost:5000/api/states/${selectedCountry}`)
+        .get(`${baseUrl}/api/states/${selectedCountry}`)
         .then((response) => {
           setStates(response.data);
         })
@@ -44,7 +45,7 @@ const AddCustomer = () => {
   useEffect(() => {
     if (selectedState) {
       axios
-        .get(`http://localhost:5000/api/cities/${selectedState}`)
+        .get(`${baseUrl}/api/cities/${selectedState}`)
         .then((response) => {
           setCities(response.data);
         })
@@ -73,7 +74,7 @@ const AddCustomer = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/customers/register", data)
+      .post(`${baseUrl}/api/customers/register`, data)
 
       .then((response: any) => {
         toast.success("Customer registered successfully");
